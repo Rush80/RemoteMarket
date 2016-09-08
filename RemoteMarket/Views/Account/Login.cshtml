@@ -4,60 +4,144 @@
     ViewBag.Title = "Log in";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Ремонт-Маркет</title>
+	<meta name="description" content="Ремонт-Маркет" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="img/logo.svg" />
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<header class="header_container">
+		<div class="container">
+			<div class="col-md-12 link">
+				<a href="index.html" target="_self" class="logo" title="На главную">На главную</a>
+				<div class="align_right valign_center">
+					<div class="profile_link text_as_bkg">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<section>
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container top_offset">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="row text_center">
+                                <h2>Мой профиль</h2>
+                            </div>
+                            <div class="row well">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Емейл</label>
+                                        <div class="col-md-9">
+                                            @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+                                            @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Пароль</label>
+                                        <div class="col-md-9">
+                                            @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
+                                            @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <div class="checkbox">
+                                                @Html.CheckBoxFor(m => m.RememberMe)
+                                                <label class="col-md-3 control-label">Запомнить меня</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block">Войти</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a href="#">Не можете войти?</a>
+                                    </div>
+                                    <div class="col-md-6 text_right">
+                                        @Html.ActionLink("Регистрация", "Register")
+                                    </div>
+                                </div>
+                            </div>                 
+                            <p>
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                            </p>
+                            <div class="row">
+                                <div class="row top_offset">
+                                    <div class="col-md-6">
+                                        <div class="row text_center">
+                                            <div class="col-md-12 small">
+                                                Войти через ВКонтакте
+                                            </div>
+                                        </div>
+                                        <div class="row text_center top_offset">
+                                            <div class="col-md-12">
+                                                <a href="#"><img src="img/vk_logo.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text_center">
+                                        <div class="row">
+                                            <div class="col-md-12 small">
+                                                Войти через Facebook
+                                            </div>
+                                        </div>
+                                        <div class="row text_center top_offset">
+                                            <div class="col-md-12">
+                                                <a href="#"><img src="img/facebook_logo.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row top_offset">
+                                    <div class="col-md-10 col-md-offset-1 small text_center">
+                                        Входя в раздел Мой профиль, вы принимаете
+                                        <a href="#">Условия использования</a>
+                                        сайта
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            </div>
+        </div>
+    }
+</section>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

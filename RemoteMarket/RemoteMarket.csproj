@@ -233,6 +233,30 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Account\css\common.css" />
+    <Content Include="Views\Account\css\fonts.css" />
+    <Content Include="Views\Account\css\main.css" />
+    <Content Include="Views\Account\img\facebook_logo.png" />
+    <Content Include="Views\Account\img\LOGO.ico" />
+    <Content Include="Views\Account\img\LOGO.svg" />
+    <Content Include="Views\Account\img\LOGO2.svg" />
+    <Content Include="Views\Account\img\vk_logo.png" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap.css" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Views\Account\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\Account\libs\bootstrap\js\bootstrap.js" />
+    <Content Include="Views\Account\libs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Views\Account\libs\bootstrap\js\npm.js" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\Account\libs\html5shiv\es5-shim.min.js" />
+    <Content Include="Views\Account\libs\html5shiv\html5shiv-printshiv.min.js" />
+    <Content Include="Views\Account\libs\html5shiv\html5shiv.min.js" />
+    <Content Include="Views\Account\libs\html5shiv\respond.min.js" />
+    <Content Include="Views\Account\libs\respond\respond.min.js" />
+    <None Include="Views\Account\Login.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -253,7 +277,7 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Login3.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
@@ -267,9 +291,43 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\fonts\RobotoBold\RobotoBold.eot" />
+    <Content Include="Views\Account\fonts\RobotoBold\RobotoBold.ttf" />
+    <Content Include="Views\Account\fonts\RobotoBold\RobotoBold.woff" />
+    <Content Include="Views\Account\fonts\RobotoCondensedBold\RobotoCondensedBold.eot" />
+    <Content Include="Views\Account\fonts\RobotoCondensedBold\RobotoCondensedBold.ttf" />
+    <Content Include="Views\Account\fonts\RobotoCondensedBold\RobotoCondensedBold.woff" />
+    <Content Include="Views\Account\fonts\RobotoCondensedLight\RobotoCondensedLight.eot" />
+    <Content Include="Views\Account\fonts\RobotoCondensedLight\RobotoCondensedLight.ttf" />
+    <Content Include="Views\Account\fonts\RobotoCondensedLight\RobotoCondensedLight.woff" />
+    <Content Include="Views\Account\fonts\RobotoCondensedRegular\RobotoCondensedRegular.eot" />
+    <Content Include="Views\Account\fonts\RobotoCondensedRegular\RobotoCondensedRegular.ttf" />
+    <Content Include="Views\Account\fonts\RobotoCondensedRegular\RobotoCondensedRegular.woff" />
+    <Content Include="Views\Account\fonts\RobotoLight\RobotoLight.eot" />
+    <Content Include="Views\Account\fonts\RobotoLight\RobotoLight.ttf" />
+    <Content Include="Views\Account\fonts\RobotoLight\RobotoLight.woff" />
+    <Content Include="Views\Account\fonts\RobotoMedium\RobotoMedium.eot" />
+    <Content Include="Views\Account\fonts\RobotoMedium\RobotoMedium.ttf" />
+    <Content Include="Views\Account\fonts\RobotoMedium\RobotoMedium.woff" />
+    <Content Include="Views\Account\fonts\RobotoRegular\RobotoRegular.eot" />
+    <Content Include="Views\Account\fonts\RobotoRegular\RobotoRegular.ttf" />
+    <Content Include="Views\Account\fonts\RobotoRegular\RobotoRegular.woff" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Views\Account\libs\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Views\Account\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Account\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\Account\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Account\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\Account\libs\font-awesome-4.2.0\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Account\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
