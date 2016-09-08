@@ -39,7 +39,7 @@
 		</div>
 	</header>
 <section>
-    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
     {
         @Html.AntiForgeryToken()
         <div class="container top_offset">
@@ -88,7 +88,7 @@
                                         @Html.ActionLink("Регистрация", "Register")
                                     </div>
                                 </div>
-                            </div>                 
+                            </div>
                             <p>
                                 @Html.ActionLink("Forgot your password?", "ForgotPassword")
                             </p>
@@ -112,18 +112,24 @@
                                                 Войти через Facebook
                                             </div>
                                         </div>
-                                        <div class="row text_center top_offset">
-                                            <div class="col-md-12">
-                                                <a href="#"><img src="img/facebook_logo.png"></a>
-                                            </div>
+                                        <div class="col-md-4">
+                                            <section id="socialLoginForm">
+                                                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                                            </section>
+                                        </div>
+                                        @*<div class="row text_center top_offset">
+                                                <div class="col-md-12">
+                                                    <a href="#"><img src="img/facebook_logo.png"></a>
+                                                </div>
+                                            </div>*@
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row top_offset">
-                                    <div class="col-md-10 col-md-offset-1 small text_center">
-                                        Входя в раздел Мой профиль, вы принимаете
-                                        <a href="#">Условия использования</a>
-                                        сайта
+                                    <div class="row top_offset">
+                                        <div class="col-md-10 col-md-offset-1 small text_center">
+                                            Входя в раздел Мой профиль, вы принимаете
+                                            <a href="#">Условия использования</a>
+                                            сайта
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -131,17 +137,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-    }
-</section>
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
-</body>
-</html>
+        }
+    </section>
+    <!--[if lt IE 9]>
+        <script src="libs/html5shiv/es5-shim.min.js"></script>
+        <script src="libs/html5shiv/html5shiv.min.js"></script>
+        <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+        <script src="libs/respond/respond.min.js"></script>
+        <![endif]-->
+        <script src="libs/jquery/jquery-1.11.1.min.js"></script>
+        <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+        <!-- Google Analytics counter --><!-- /Google Analytics counter -->
+    </body>
+    </html>

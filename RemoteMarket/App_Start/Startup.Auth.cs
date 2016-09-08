@@ -54,9 +54,9 @@ namespace RemoteMarket
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1645236742454354",
+               appSecret: "b0ff600ddcc2510eb2aeb23592cf74f4");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
