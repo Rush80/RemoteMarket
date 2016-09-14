@@ -1,7 +1,13 @@
-﻿@using RemoteMarket.Models
+﻿@using System.Runtime.Versioning
+@using RemoteMarket.Models
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
+    //Layout = null;
+    if(!Request.QueryString["lang"].IsEmpty())
+    {
+        Culture = UICulture = Request.QueryString["lang"];
+    }
 }
 
 
@@ -42,6 +48,10 @@
     @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
     {
         @Html.AntiForgeryToken()
+        @Content.test
+        <a href="@Url.Action("Change", "Account", new {lang = "en"})">Language</a>
+        <a href="@Url.Action("Change", "Account", new {lang = "ru"})">Язык</a>
+        <a href="@Url.Action("Change", "Account", new {lang = "uk"})">Мова</a>
         <div class="container top_offset">
             <div class="row">
                 <div class="col-md-12">
@@ -138,8 +148,7 @@
                 </div>
             </div>
         }
-    </section>
-    <!--[if lt IE 9]>
+    </section>    <!--[if lt IE 9]>
         <script src="libs/html5shiv/es5-shim.min.js"></script>
         <script src="libs/html5shiv/html5shiv.min.js"></script>
         <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>

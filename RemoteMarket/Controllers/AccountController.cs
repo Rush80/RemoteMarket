@@ -61,6 +61,14 @@ namespace RemoteMarket.Controllers
             return View();
         }
 
+
+        // GET: /Account/Login
+        [AllowAnonymous]
+        public ActionResult Change(string lang)
+        {
+            return View("Login");
+        }
+
         //
         // POST: /Account/Login
         [HttpPost]
