@@ -61,6 +61,15 @@ namespace RemoteMarket {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dmytrii Melentiev.
         /// </summary>
         public static string test {

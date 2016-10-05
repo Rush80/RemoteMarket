@@ -49,8 +49,8 @@ namespace RemoteMarket.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
+        [Display(Name = "Email", ResourceType = typeof(Content))]
+        [EmailAddress(ErrorMessageResourceName = "Email", ErrorMessageResourceType = typeof(Content))]
         public string Email { get; set; }
 
         [Required]
