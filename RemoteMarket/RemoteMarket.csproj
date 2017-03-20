@@ -225,6 +225,8 @@
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ProjectContext.cs" />
     <Compile Include="Models\WorkType.cs" />
     <Compile Include="Models\WorkTypeContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -344,7 +346,6 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login3.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
@@ -401,7 +402,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\Account\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
