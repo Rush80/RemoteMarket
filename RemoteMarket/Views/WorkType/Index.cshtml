@@ -1,0 +1,23 @@
+﻿@using RemoteMarket.Models
+@model IEnumerable<RemoteMarket.Models.WorkType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Add", "Add", "WorkType", null)
+<table class="table-bordered">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.Name </td>
+            <td> @Html.ActionLink("Edit", "Edit", "WorkType", new {id = item.WorkTypeId}, null) </td>
+            <td> @Html.ActionLink("Delete", "Delete", "WorkType", new { id = item.WorkTypeId }, null) </td>
+        </tr>
+    }
+    <div ng-app ="">
+        Plain text {{10 + 20}}
+    </div>
+    <script src="~/Scripts/angular.js"></script>
+</table>

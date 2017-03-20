@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel("Job")
+    <br />
+    <input type="submit" value="Submit" />
+}

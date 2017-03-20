@@ -1,0 +1,49 @@
+﻿@using RemoteMarket.Models
+@model IEnumerable<RemoteMarket.Models.Job>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (@Html.BeginForm())
+{
+@Html.DropDownList("ddlWorkTypes", ViewBag.WorkTypes as SelectList)
+
+@Html.TextBox("tbJobName")
+
+<input type="button" id="btnAdd" name="btnAdd" value="Add" />
+
+    <br>
+
+    <table class="table-bordered">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.Name </td>
+                <td> @Html.ActionLink("Edit", "Edit", "Job", new { id = item.JobId }, null) </td>
+                <td> @Html.ActionLink("Delete", "Delete", "Job", new { id = item.JobId }, null) </td>
+            </tr>
+        }
+    </table>
+
+}
+
+<script src="/scripts/jquery-3.1.1.js" type="text/javascript"></script>
+<script>
+$(function() {
+    $('select#ddlWorkTypes').change(function () {
+        window.location.href = "/Job/Index?workTypeId=" + $(this).val();
+        });
+
+    });
+
+
+
+$("#btnAdd").click(function () {
+    $.get("/Job/Add", { workTypeId: $(document.getElementById("ddlWorkTypes")).val(), jobName: $("#tbJobName").val() }).done(function (data) {
+        window.location.href = "/Job/Index?workTypeId=" + $(document.getElementById("ddlWorkTypes")).val();
+    });
+});
+
+</script>

@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+@section scripts{
+    <script src="~/Scripts/AngularControllers/MasterDetailController.js"></script>
+}
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Пошук роботи</title>
+</head>
+<body class="grey">
+
+    <div class="container">
+        <form>
+
+            <div class="photoRM">
+                <img src="~/img/LOGO.svg">
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 login-details">
+                    <header>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        Я новий користувач:
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Я користувач, що повернувся:
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <article>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="Email">
+                                    Електронна адреса:
+                                </label>
+                                <input type="email" class="form-control" id="Email" placeholder="Email">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="NameN">
+                                    Нове ім'я користувача:
+                                </label>
+                                <input type="name" class="form-control" id="NameN" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="Password1">
+                                    Пароль:
+                                </label>
+                                <input type="password" class="form-control" id="Password1" placeholder="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Password2">
+                                    Пароль:
+                                </label>
+                                <input type="password" class="form-control" id="Password2" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="Name">
+                                    Ім'я користувача або електронна пошта:
+                                </label>
+                                <input type="name" class="form-control" id="Name" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Password">Введіть пароль ще раз:</label>
+                                <input type="password" class="form-control" id="Password" placeholder="Password">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- #1 -->
+                    <div class="row" ng-controller="MasterDetailController">
+                        <div class="col-md-12 job-details">
+                            <header>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="~/img/П1.png" class="job-detail-num">
+                                        Який тип роботи Вам необхідно виконати?
+                                    </div>
+                                </div>
+                            </header>
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <article>
+                                            <select class="form-control" ng-model="WorkTypeId" ng-options="I.WorkTypeId as I.Name for I in WorkTypeList" ng-change="GetJobs()">
+                                                <option value="">Select Work type</option>
+                                            </select>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <article>
+                                            <select ng-model="JobId" ng-options="I.JobId as I.Name for I in JobList" class="form-control">
+                                                <option value="">{{StateTextToShow}}</option>
+                                            </select>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- #2 -->
+                    <div class="row">
+                        <div class="col-md-12 job-details">
+                            <header>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="~/img/П2.png" class="job-detail-num">
+                                        Яка тема Вашого проекту?
+                                    </div>
+                                </div>
+                            </header>
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <header>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    Назва проекту :
+                                                    <img src="~/img/ПВ.png" class="job-detail-help">
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field location-check">
+                                        <article>
+                                            Чи потребує Ваш проект участі місцевого виконавця?
+                                            <img src="~/img/ПВ.png" class="job-detail-help">
+                                            <input class="job-detail-help" type="checkbox">
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                            <footer>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <div class="location">
+                                            <header>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        Де Вам потрібно це зробити?
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <article>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control" placeholder="Введіть місцезнаходження (місто)">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn btn-primary btn-block">
+                                                            Визначити моє місцезнаходження
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- #3 -->
+                    <div class="row">
+                        <div class="col-md-12 job-details">
+                            <header>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="~/img/П3.png" class="job-detail-num">
+                                        Розкажіть нам більше про свій проект.
+                                    </div>
+                                </div>
+                            </header>
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <header>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    Які навички необхідні?
+                                                    <img src="~/img/ПВ.png" class="job-detail-help">
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <textarea class="form-control" rows="1"></textarea>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 job-details-field">
+                                        <header>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    Опишіть Ваш проект
+                                                    <img src="~/img/ПВ.png" class="job-detail-help">
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                            <footer>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="upload-file">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-default btn-lg">
+                                                        + Upload File
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    Перетягніть сюди зображення або документи, які можуть бути корисні, як інформативне доповнення до короткого опису Вашого проекту.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- #4 -->
+                    <div class="row">
+                        <div class="col-md-12 job-details">
+                            <header>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="~/img/П4.png" class="job-detail-num">
+                                        Який бюджет Ви запланували (грн.)?
+                                    </div>
+                                </div>
+                            </header>
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="price" id="Radio1" value="option1" checked>
+                                                Встановити фіксовану ціну :
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="price" id="Radio3" value="option3">
+                                                Погодинна оплата :
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Тривалість проекту :
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 job-details-field">
+                                        <select class="form-control">
+                                            <option>Менш ніж 1 тиждень</option>
+                                            <option>1-2 тижні</option>
+                                            <option>Менш ніж 1 місяць</option>
+                                            <option>1-3 місяці</option>
+                                            <option>3-6 місяців</option>
+                                            <option>Понад 6 місяців / Довгострокові</option>
+                                            <option>Невпевнений</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row job-post">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg active">
+                                Опублікувати проект зараз
+                            </button>
+                        </div>
+
+                        <div class="col-md-6">
+                            Натискаючи 'Опублікувати проект зараз', Ви засвідчуєте, що прочитали та погодились з
+                            <a href="#">Умовами користування </a>та
+                            <a href="#">Політикою конфіденційності</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>

@@ -29,7 +29,11 @@ namespace RemoteMarket
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/fonts.css",
+                      "~/Content/job.css",
+                      "~/Content/main.css",
+                      "~/Content/common.css"));
         }
     }
 }

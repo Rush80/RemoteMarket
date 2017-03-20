@@ -1,0 +1,12 @@
+﻿@model RemoteMarket.Models.WorkType
+@{
+    ViewBag.Title = "Edit";
+}
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel("WorkType")
+    <br />
+    <input type="submit" value="Submit" />
+}
+<h2>Edit</h2>
+
