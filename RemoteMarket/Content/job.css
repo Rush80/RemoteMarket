@@ -1,0 +1,133 @@
+.position_currency{
+	margin: 1em 0em 0em -2em;
+}
+
+.position_from_to{
+	margin: 1em -2em 0em 0em;
+}
+
+.dobalans{
+	margin-left: 2em;
+}
+
+/*header{
+	background: lightgreen;
+}
+
+article{
+	background: yellow;
+}
+
+footer{
+	background:  red;
+}
+*/
+
+/* ------------ logo ----------------- */
+
+.photoRM{
+	max-width: 5em;
+	max-height: 5em;
+	margin-top: 2em;	
+}
+
+/* ------------ login ----------------- */
+
+.login-details{
+	border-bottom: 1px solid black;
+	padding-bottom: 3em;
+}
+
+.login-details label{
+	text-transform: uppercase;
+	font-weight: normal !important;
+	font-size: smaller;
+	margin-top: 1em;
+}
+
+.login-details header label{
+	font-size: medium;
+	text-transform: uppercase;
+}
+
+/* ------------ job details ----------------- */
+
+.job-details{
+	margin-top: 3em;
+}
+
+.job-details header{
+	font-size: large;
+	font-weight: bold;
+}
+
+.job-detail-num{	
+	max-width: 2em;
+	max-height: 2em;	    
+}
+
+.job-details article{
+	font-size: smaller;
+	text-transform: uppercase;
+}
+
+.job-details footer{
+	font-size: smaller;
+	margin-top: 1em;
+}
+
+/* ------------ job details field ----------------- */
+
+.job-details-field{
+	margin-top: 1em;	
+}
+
+.job-details-field header{
+	font-size: smaller;
+	margin-bottom: 0.5em;
+	font-weight: normal;
+}
+
+.job-detail-help{
+	max-width: 1em;
+	max-height: 1em;
+	vertical-align: -4%;
+}
+
+/* ------------ post project ----------------- */
+
+.job-post{
+	margin-top: 2em;
+	padding-top: 2em;
+	border-top: 1px solid black;
+}
+
+/* ------------ custom fields ----------------- */
+
+.upload-file{
+	border-style: dashed;
+	border-color: lightgrey;
+	border-width: 1px;
+	padding: 1em;
+}
+
+.location{
+	border-style: dashed;
+	border-color: lightgrey;
+	border-width: 1px;
+	padding: 1em;
+}
+
+.location header{
+	font-size: smaller;
+	text-transform: uppercase;
+}
+
+.location-check {
+	text-align: right;
+}
+
+.grey{
+	background-color: #f2f2f2;
+}
+
