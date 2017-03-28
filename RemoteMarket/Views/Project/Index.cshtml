@@ -83,44 +83,40 @@
                     </header>
 
                     <article>
+                        
                         <div class="row">
-                            <div class="col-md-6">
-                                <label for="Email">
-                                    Електронна адреса:
-                                </label>
-                                <input type="email" class="form-control" id="Email" placeholder="Email">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="NameN">
-                                    Нове ім'я користувача:
-                                </label>
-                                <input type="name" class="form-control" id="NameN" placeholder="Name">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="email">Eлектронна адреса:</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="name_new">Нове ім'я користувача:</label>
+                                        <input type="name" class="form-control" name="name" id="name_new" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="password_new">Пароль:</label>
+                                        <input type="password" class="form-control" name="password" id="password_new" placeholder="Password">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="password_new2">Введіть пароль ще раз:</label>
+                                        <input type="password" class="form-control" name="password2" id="password_new2" placeholder="Password">
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="Password1">
-                                    Пароль:
-                                </label>
-                                <input type="password" class="form-control" id="Password1" placeholder="Password">
+                                <label for="login">Ім'я користувача або електронна пошта:</label>
+                                <input type="name" class="form-control" name="login" id="login" placeholder="Login">
                             </div>
                             <div class="col-md-6">
-                                <label for="Password2">
-                                    Пароль:
-                                </label>
-                                <input type="password" class="form-control" id="Password2" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="row invisible">
-                            <div class="col-md-6">
-                                <label for="Name">
-                                    Ім'я користувача або електронна пошта:
-                                </label>
-                                <input type="name" class="form-control" id="Name" placeholder="Name">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="Password">Введіть пароль ще раз:</label>
-                                <input type="password" class="form-control" id="Password" placeholder="Password">
+                                <label for="password">Пароль:</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                             </div>
                         </div>
                     </article>
