@@ -15,6 +15,8 @@
 
         public string Description { get; set; }
 
+        public int Duration { get; set; }
+
 
     }
 }

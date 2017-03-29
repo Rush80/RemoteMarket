@@ -352,15 +352,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-5 job-details-field">
-                                <select class="form-control">
-                                    <option>Менш ніж 1 тиждень</option>
-                                    <option>1-2 тижні</option>
-                                    <option>Менш ніж 1 місяць</option>
-                                    <option>1-3 місяці</option>
-                                    <option>3-6 місяців</option>
-                                    <option>Понад 6 місяців / Довгострокові</option>
-                                    <option>Невпевнений</option>
-                                </select>
+                                @Html.DropDownListFor(m => m.Duration, new SelectList(ViewBag.Durations, "key", "value"), new { @class = "form-control" })
                             </div>
                         </div>
                     </article>
