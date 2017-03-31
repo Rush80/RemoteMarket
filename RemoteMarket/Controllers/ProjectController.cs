@@ -34,8 +34,14 @@ namespace RemoteMarket.Controllers
         [AllowAnonymous]
         public ActionResult Save(Project mode)
         {
-            string tst = Request.Form["inLocation"].ToString();
+            HttpRequestBase request = Request;
+            request.Params.GetValues("ddlJobTypes").ToString();
             return null;
+        }
+
+        public void UploadFile()
+        {
+            
         }
     }
 }
