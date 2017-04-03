@@ -2,8 +2,6 @@
 .controller('MasterDetailController', function ($scope, LocationService) {
     // expained about controller in Part2 // Here LocationService (Service) Injected
     
-    $scope.WorkTypeId = null;
-    $scope.JobId = null;
     $scope.WorkTypeList = null;
     $scope.JobList = null;
 

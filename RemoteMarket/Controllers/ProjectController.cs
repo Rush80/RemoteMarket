@@ -10,6 +10,7 @@ namespace RemoteMarket.Controllers
 {
     public class ProjectController : Controller
     {
+        private ProjectContext projectContext = new ProjectContext();
         private Hashtable GetDurations()
         {
             Hashtable list = new Hashtable();
@@ -32,10 +33,10 @@ namespace RemoteMarket.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Save(Project mode)
+        public ActionResult Save(Project project)
         {
-            HttpRequestBase request = Request;
-            request.Params.GetValues("ddlJobTypes").ToString();
+            projectContext.Projects.Add(project);
+            projectContext.SaveChanges();
             return null;
         }
 

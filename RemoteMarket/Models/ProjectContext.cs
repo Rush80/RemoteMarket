@@ -4,6 +4,6 @@ namespace RemoteMarket.Models
 {
     public class ProjectContext : DbContext
     {
-        public DbSet<Project> JobTypes { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }

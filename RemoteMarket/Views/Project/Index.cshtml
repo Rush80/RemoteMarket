@@ -156,16 +156,19 @@
                                     <select class="form-control" ng-model="WorkTypeId" ng-options="I.WorkTypeId as I.Name for I in WorkTypeList" ng-change="GetJobs()">
                                         <option value="">Select Work type</option>
                                     </select>
-                                </article>
+                                </article>    
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 job-details-field">
                                 <article>
-                                    <select name ="ddlJobTypes" ng-model="JobId" ng-options="I.JobId as I.Name for I in JobList" class="form-control">
+                                    <select name="ddlJobTypes" ng-model="JobId" ng-options="I.JobId as I.Name for I in JobList" class="form-control">
                                         <option value="">{{StateTextToShow}}</option>
                                     </select>
                                 </article>
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(m => m.JobId, new { Value = "{{JobId}}", style = "display: none;" })
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -200,7 +203,7 @@
                                 <article>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+                                            @Html.TextBoxFor(m => m.Subject, new {@class = "form-control"})
                                         </div>
                                     </div>
                                 </article>
