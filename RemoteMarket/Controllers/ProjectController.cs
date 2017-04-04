@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using RemoteMarket.Models;
 
 namespace RemoteMarket.Controllers
@@ -35,6 +36,9 @@ namespace RemoteMarket.Controllers
         [AllowAnonymous]
         public ActionResult Save(Project project)
         {
+            string userId = User.Identity.GetUserId();
+            if (userId != null)
+                project.UserId = userId;
             projectContext.Projects.Add(project);
             projectContext.SaveChanges();
             return null;

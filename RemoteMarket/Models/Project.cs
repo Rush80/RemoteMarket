@@ -5,6 +5,8 @@
         //[ScaffoldColumn(false)]
         public int ProjectId { get; set; }
 
+        public string UserId { get; set; }
+
         public int JobId { get; set; }
 
         public string Budget { get; set; }
@@ -17,6 +19,5 @@
 
         public int Duration { get; set; }
 
-
-    }
+     }
 }
