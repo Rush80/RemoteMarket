@@ -64,6 +64,30 @@
     <meta charset="utf-8" />
     <title>Пошук роботи</title>
 </head>
+
+
+
+<script>
+function onBodyLoad()
+{
+	document.getElementById('user_new').checked="checked";
+}
+
+function newUserClick()
+{
+	document.getElementById('oldUser').classList.add('hidden');
+    document.getElementById('newUser').classList.remove('hidden');
+}
+
+function oldUserClick()
+{
+	document.getElementById('newUser').classList.add('hidden');
+	document.getElementById('oldUser').classList.remove('hidden');
+}
+
+</script>
+
+
 <body class="grey">
 
     <div class="container">
@@ -74,30 +98,26 @@
             </div>
             <div class="row">
                 <div class="col-md-8 login-details">
-                    <header>
+                    <article>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                        Я новий користувач:
+                                    <label for="user_new">
+                                        <input type="radio" name="user" id="user_new" value="new" checked onclick="newUserClick()">Я новий користувач:
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                        Я користувач, що повернувся:
+                                    <label for="user_old">
+                                        <input type="radio" name="user" id="user_old" value="old" onclick="oldUserClick()">Я користувач, що повернувся:
                                     </label>
                                 </div>
                             </div>
                         </div>
-                    </header>
 
-                    <article>
-                        
-                        <div class="row">
+                        <div class="row" id="newUser">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -122,7 +142,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row hidden" id="oldUser">
                             <div class="col-md-6">
                                 <label for="login">Ім'я користувача або електронна пошта:</label>
                                 <input type="name" class="form-control" name="login" id="login" placeholder="Login">
@@ -156,7 +176,7 @@
                                     <select class="form-control" ng-model="WorkTypeId" ng-options="I.WorkTypeId as I.Name for I in WorkTypeList" ng-change="GetJobs()">
                                         <option value="">Select Work type</option>
                                     </select>
-                                </article>    
+                                </article>
                             </div>
                         </div>
                         <div class="row">

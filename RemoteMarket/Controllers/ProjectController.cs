@@ -49,7 +49,7 @@ namespace RemoteMarket.Controllers
         {
             context.Response.ContentType = "text/plain";
 
-            string dirFullPath = HttpContext.Current.Server.MapPath("~/MediaUploader/");
+           /* string dirFullPath = HttpContext.Current.Server.MapPath("~/MediaUploader/");
             string[] files;
             int numFiles;
             files = System.IO.Directory.GetFiles(dirFullPath);
@@ -72,7 +72,7 @@ namespace RemoteMarket.Controllers
                     string pathToSave_100 = HttpContext.Current.Server.MapPath("~/MediaUploader/") + str_image;
                     file.SaveAs(pathToSave_100);
                 }
-            }
+            }*/
         }
     }
 }
