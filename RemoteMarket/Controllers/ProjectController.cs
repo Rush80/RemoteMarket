@@ -42,7 +42,7 @@ namespace RemoteMarket.Controllers
                 project.UserId = userId;
             projectContext.Projects.Add(project);
             projectContext.SaveChanges();
-            return null;
+            return View("Preview");
         }
 
         public void UploadFile(HttpContext context)

@@ -245,6 +245,7 @@
     <Content Include="Content\fonts.css" />
     <Content Include="Content\job.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\project_element.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -255,6 +256,7 @@
     <Content Include="img\LOGO2.svg" />
     <Content Include="img\vk_logo.png" />
     <Content Include="img\Глаз.jpg" />
+    <Content Include="img\глаза.jpg" />
     <Content Include="img\П1.png" />
     <Content Include="img\П2.png" />
     <Content Include="img\П3.png" />
@@ -342,6 +344,7 @@
     <Content Include="Views\Job\Add.cshtml" />
     <Content Include="Views\Job\Edit.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\Preview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />

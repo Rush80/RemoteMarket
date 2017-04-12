@@ -1,0 +1,53 @@
+.photoRM{
+	max-width: 5em;
+	max-height: 5em;
+	margin: 2em;	
+}
+
+.row-flex{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.project_container{
+	border: 2px solid black;
+	margin: 0;
+}
+
+.project_name{	
+	font-weight: bold;
+	font-size: 150%;	
+}
+
+.project_price{
+	font-weight: bold;
+	font-size: 2em;
+	text-align: right;
+}
+
+.project_category{
+	color: #b4b4b4;
+}
+
+.project_terms{
+	color: #b4b4b4;	
+}
+
+.project_description{
+	font-style: italic;
+}
+
+.project_date{
+	color: #b4b4b4;
+	text-align: right;
+}
+
+.project_location{
+	color: #b4b4b4;
+	text-align: right;
+}
+
+.project_publish{
+	text-align: right;	
+}
