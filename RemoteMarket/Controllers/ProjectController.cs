@@ -45,9 +45,9 @@ namespace RemoteMarket.Controllers
             return View("Preview");
         }
 
-        public void UploadFile(HttpContext context)
+        public void UploadFile()
         {
-            context.Response.ContentType = "text/plain";
+            //context.Response.ContentType = "text/plain";
 
            /* string dirFullPath = HttpContext.Current.Server.MapPath("~/MediaUploader/");
             string[] files;
