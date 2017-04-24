@@ -1,0 +1,54 @@
+﻿.row-flex{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.logoRM{	
+	margin: 2em;	
+}
+
+.photo_height {
+    line-height: 24em;
+    background: url(../img/колонки1.jpg) no-repeat center center;
+    background-size: contain;
+}
+
+
+.title_nurse {
+    color: rgb(43, 43, 43);
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.project_price {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+}
+
+.project_category {
+    color: #b4b4b4;
+}
+
+.project_terms {
+    color: #b4b4b4;
+    text-align: right;
+}
+
+.project_container{	
+	border: 1px solid lightgrey;
+	margin: 0;
+}
+
+.published_where{
+	font-weight: bold;
+}
+
+.issued_when{
+	font-size: 12px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.announcement_text{
+	font-size: 15px;
+}
