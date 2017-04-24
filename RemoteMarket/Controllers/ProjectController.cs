@@ -33,6 +33,13 @@ namespace RemoteMarket.Controllers
             return View();
         }
 
+        // GET: Project
+        public ActionResult Test()
+        {
+            ViewBag.Durations = GetDurations();
+            return View("project_view");
+        }
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Save(Project project)

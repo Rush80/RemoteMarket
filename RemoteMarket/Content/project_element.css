@@ -1,3 +1,9 @@
+.outimg{
+	background: url(../img/глаза.jpg) no-repeat center center; 
+	background-size: contain; 
+	background-color: lightgrey;
+}
+
 .photoRM{
 	max-width: 5em;
 	max-height: 5em;
