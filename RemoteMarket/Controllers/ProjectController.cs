@@ -29,6 +29,7 @@ namespace RemoteMarket.Controllers
         // GET: Project
         public ActionResult Index()
         {
+            ViewBag.UserId = User.Identity.GetUserId();
             ViewBag.Durations = GetDurations();
             return View();
         }
@@ -36,7 +37,6 @@ namespace RemoteMarket.Controllers
         // GET: Project
         public ActionResult Projects()
         {
-            
             return View("Projects", projectContext.Projects);
         }
 
