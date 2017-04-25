@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model RemoteMarket.Models.ProjectViewModel
+
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -27,10 +29,10 @@
             </div>
             <div class="row">
                 <div class="col-md-8 title_nurse">
-                    Название проекта
+                    @Model.Project.Subject
                 </div>
                 <div class="col-md-4 project_price">
-                    100500
+                    @Model.Project.Budget
                 </div>
             </div>
             <div class="row project_category">
@@ -38,12 +40,12 @@
                     Категория1>Категория2>Категория3
                 </div>
                 <div class="col-md-6 project_terms">
-                    Термін: від Ро.ма.на. до Йо.рд.ана.
+                    Термін: @Model.Duration
                 </div>
             </div><br>
             <div class="row">
                 <div class="col-md-12 announcement_text">
-                    Полнейшее описание проекта ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...
+                    @Model.Project.Description
                 </div>
             </div>
         </div>

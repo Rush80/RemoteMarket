@@ -34,10 +34,10 @@ namespace RemoteMarket.Controllers
         }
 
         // GET: Project
-        public ActionResult Test()
+        public ActionResult Projects()
         {
             ViewBag.Durations = GetDurations();
-            return View("project_view");
+            return View("Preview");
         }
 
         [HttpPost]
@@ -49,7 +49,11 @@ namespace RemoteMarket.Controllers
                 project.UserId = userId;
             projectContext.Projects.Add(project);
             projectContext.SaveChanges();
-            return View("Preview");
+
+            ProjectViewModel viewModel = new ProjectViewModel();
+            viewModel.Project = project;
+            viewModel.Duration = GetDurations()[project.Duration].ToString();
+            return View("project_view", viewModel);
         }
 
         public void UploadFile()

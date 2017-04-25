@@ -20,4 +20,17 @@
         public int Duration { get; set; }
 
      }
+
+
+    public class ProjectViewModel
+    {
+        public Project Project;
+      
+        public int JobName { get; set; }
+
+        public int WorkName { get; set; }
+
+        public string Duration { get; set; }
+
+    }
 }

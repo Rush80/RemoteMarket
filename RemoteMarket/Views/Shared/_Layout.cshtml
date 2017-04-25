@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -23,7 +23,7 @@
                     <li>@Html.ActionLink("Work Type", "Index", "WorkType")</li>
                     <li>@Html.ActionLink("Job", "Index", "Job")</li>
                     <li>@Html.ActionLink("Project", "Index", "Project")</li>
-                    <li>@Html.ActionLink("Project view", "Test", "Project")</li>
+                    <li>@Html.ActionLink("Projects", "Projects", "Project")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -31,10 +31,6 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
