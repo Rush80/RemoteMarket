@@ -36,8 +36,8 @@ namespace RemoteMarket.Controllers
         // GET: Project
         public ActionResult Projects()
         {
-            ViewBag.Durations = GetDurations();
-            return View("Preview");
+            
+            return View("Projects", projectContext.Projects);
         }
 
         [HttpPost]

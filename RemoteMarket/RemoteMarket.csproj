@@ -381,7 +381,7 @@
     <Content Include="Views\Job\Add.cshtml" />
     <Content Include="Views\Job\Edit.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\Project\Preview.cshtml" />
+    <Content Include="Views\Project\Projects.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
