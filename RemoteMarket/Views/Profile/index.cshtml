@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<script>
+	var x=true;	y=true; z=true; w=true;
+
+function onBodyLoad()
+{
+	test('');
+	document.getElementById('user_new').checked="checked";
+}
+
+function newUserClick()
+{
+	document.getElementById('oldUser').classList.add('hidden'); 
+	document.getElementById('newUser').classList.remove('hidden');
+}
+
+function oldUserClick()
+{
+	document.getElementById('newUser').classList.add('hidden'); 
+	document.getElementById('oldUser').classList.remove('hidden');
+}
+
+function test(id)
+{	
+
+	if (id=='editContactDetails'&x)
+	{
+		$("#editContactDetails").slideDown();
+		x=false;
+		document.getElementById('editContactDetailsArrow').classList.remove('triangleDown');
+		document.getElementById('editContactDetailsArrow').classList.add('triangleUP');				
+	}
+	else
+	{
+		$("#editContactDetails").slideUp();
+		x=true;
+		document.getElementById('editContactDetailsArrow').classList.remove('triangleUP');
+		document.getElementById('editContactDetailsArrow').classList.add('triangleDown');
+
+	};
+
+	if (id=='changePassword'&y)
+	{
+		$("#changePassword").slideDown();
+		y=false;
+		document.getElementById('changePasswordArrow').classList.remove('triangleDown');
+		document.getElementById('changePasswordArrow').classList.add('triangleUP');	
+	}
+	else
+	{
+		$("#changePassword").slideUp();
+		y=true;
+		document.getElementById('changePasswordArrow').classList.remove('triangleUP');
+		document.getElementById('changePasswordArrow').classList.add('triangleDown');
+	};
+
+	if (id=='changeEmail'&z)
+	{
+		$("#changeEmail").slideDown();
+		z=false;
+		document.getElementById('changeEmailArrow').classList.remove('triangleDown');
+		document.getElementById('changeEmailArrow').classList.add('triangleUP');
+	}
+	else
+	{
+		$("#changeEmail").slideUp();
+		z=true;
+		document.getElementById('changeEmailArrow').classList.remove('triangleUP');
+		document.getElementById('changeEmailArrow').classList.add('triangleDown');
+	};
+
+	if (id=='deleteAccount'&w)
+	{
+		$("#deleteAccount").slideDown();
+		w=false;
+		document.getElementById('deleteAccountArrow').classList.remove('triangleDown');
+		document.getElementById('deleteAccountArrow').classList.add('triangleUP');
+	}
+	else
+	{
+		$("#deleteAccount").slideUp();
+		w=true;
+		document.getElementById('deleteAccountArrow').classList.remove('triangleUP');
+		document.getElementById('deleteAccountArrow').classList.add('triangleDown');
+	};
+}
+</script>
+
+<body class="grey"  onload="onBodyLoad()">
+	<div class="container">
+		<div class="logo logoRM"><img src="img/LOGO.svg">
+		</div>
+		<div class="row indent_button" >
+			<div class="col-md-12" >
+				<a href="job.html"><button type="button" id="an_ad" class="btn btn-success btn-lg" style="margin: 1em 0 1em 0;">+ Подать объявление</button></a>
+			</div>					
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-9">
+				
+				<div class="row">
+					<div class="col-md-12 indent_ads">
+						<h5>Настройки</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 indent_text">
+						Здесь вы можете изменять настройки своей учётной записи
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<h5><a href="profile_ads.html">Объявления</a></h5>
+					</div>
+					<div class="col-md-2">
+						<h5><a href="profile_messages.html">Сообщения</a></h5>
+					</div>
+					<div class="col-md-2 nobordbott">
+						<h5>Настройки</h5>
+					</div>
+					<div class="col-md-6">						
+					</div>		
+				</div>
+				<div class="row">
+					<div class="col-md-4 TLbord">						
+					</div>
+					<div class="col-md-2 RLbord">
+					</div>
+					<div class="col-md-6 TRbord">					
+					</div>
+				</div>
+				<div class="row nobordtop">
+					<div class="col-md-12">
+						<div class="row settings">
+							<div class="col-md-12">											
+								<!-- <a href="#" onclick="test()">Змінити контактні дані \/</a> -->
+								<a href="javascript:test('editContactDetails')">Змінити контактні дані<span id="editContactDetailsArrow" class="triangleDown">&nbsp;</span></a >
+							</div>
+								<div id="editContactDetails" class="row" >
+									<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-4 font_pass">
+													<label for="city">Оберіть місто</label>
+													<input type="text" class="form-control" name="city" id="city" placeholder="Місто">
+												</div>
+												<div class="col-md-8">									
+												</div>								
+											</div>
+											<div class="row">
+												<div class="col-md-4 font_pass">
+													<label for="person">Контактна особа</label>
+													<input type="text" class="form-control" name="person" id="person" placeholder="Особа">
+												</div>
+												<div class="col-md-8">									
+												</div>								
+											</div>
+											<div class="row">
+												<div class="col-md-4 font_pass">
+													<label for="phone">Номер телефону</label>
+													<input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
+												</div>
+												<div class="col-md-8">									
+												</div>								
+											</div>
+											<div class="row">
+												<div class="colmd-12 font_pass">
+													<input class="job-detail-help" type="checkbox" name="checkboxx" id="checkboxx" style="margin: 0 0 0 1.2em;">
+													<label for="checkboxx">Не показувати всі оголошення на сторінці мого оголошення</label>									
+												</div>								
+											</div>
+											<div class="row">
+												<div class="col-md-4 font_pass">
+													<button type="button" class="btn btn-primary btn-block">Зберегти</button>
+												</div>
+												<div class="col-md-8">											
+												</div>
+											</div>
+									</div>		
+								</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-12">									
+								<a href="javascript:test('changePassword')">Змінити пароль<span id="changePasswordArrow" class="triangleDown">&nbsp;</span></a>
+							</div>
+							<div id="changePassword" class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<label for="password_new">Новий пароль</label>
+											<input type="password" class="form-control" name="password" id="password_new" placeholder="Password">
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<label for="password_new2">Введіть пароль ще раз</label>
+											<input type="password" class="form-control" name="password2" id="password_new2" placeholder="Password">
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<button type="button" class="btn btn-primary btn-block">
+												Змінити пароль
+											</button>
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-12">					
+								<a href="javascript:test('changeEmail')">Змінити email-адрес<span id="changeEmailArrow" class="triangleDown">&nbsp;</span></a>		
+							</div>
+							<div id="changeEmail" class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<label for="password">Ваш пароль</label>
+											<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<label for="email">Новий email-адрес</label>
+											<input type="password" class="form-control" name="email" id="email" placeholder="email">
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 font_pass">
+											<button type="button" class="btn btn-primary btn-block">Зберегти</button>
+										</div>
+										<div class="col-md-8">											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="row settings">
+							<div class="col-md-12">
+								<a href="javascript:test('deleteAccount')">Видалити обліковий запис<span id="deleteAccountArrow" class="triangleDown">&nbsp;</span></a>				
+								<div id="deleteAccount" class="row">
+									<div class="col-md-3">										
+									</div>
+									<div class="col-md-6 font_pass">
+										<button type="button" class="btn btn-danger btn-block">Видалити обліковий запис</button>
+									</div>
+									<div class="col-md-3">										
+									</div>
+								</div>
+							</div>
+						</div><br><br>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	</div><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

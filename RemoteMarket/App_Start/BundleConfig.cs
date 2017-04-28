@@ -35,7 +35,8 @@ namespace RemoteMarket
                       "~/Content/main.css",
                       "~/Content/common.css",
                       "~/Content/project_element.css",
-                      "~/Content/project_view.css"));
+                      "~/Content/project_view.css",
+                      "~/Content/mprofile.css"));
         }
     }
 }

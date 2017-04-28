@@ -1,0 +1,126 @@
+/*.row-flex{
+    	display: flex;
+    	flex-flow: row wrap;
+
+border-left-color: rgb(63, 76, 82);
+
+}
+*/
+
+.triangleDown{
+	margin-left: 0.5em;
+	background: url('../img/triangleDown.svg') no-repeat;
+	display: inline-block;
+	width: 2em;
+	vertical-align: -20%;	
+}
+
+.triangleUP{
+	margin-left: 0.5em;
+	background: url('../img/triangleUp.svg') no-repeat;
+	display: inline-block;	
+	width: 2em;
+	vertical-align: -20%;
+}
+
+.logoRM{	
+	margin: 2em 0 0 5em;
+}
+
+.logoRM:hover{	
+	margin: 5em 0 0 5em;
+}
+
+.photo{
+	max-width: 15em;
+	max-height: 15em;
+	margin: 2em;	
+}
+
+.nobordbott{
+	background: white;
+	text-align: center;
+	border-top: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+}
+
+.nobordtop{
+	background: white;
+	text-align: center;
+	border-bottom: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+}
+
+.grey{
+	background: rgb(239, 239, 239);
+}
+
+.indent_button{
+	text-align: right;	
+	background: white;
+}
+
+.indent_ads{
+	margin-top: 2em;
+	color: black;
+}
+
+.indent_text{
+	margin: -1em 0 3em 0;
+	font-size: smaller;
+}
+
+.RLbord{
+	background: white;	
+	border-right: 1px solid lightgrey;	
+	border-left: 1px solid lightgrey;
+}
+
+.TRbord{
+	background: white;
+	border-top: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;	
+}
+
+.TLbord{
+	background: white;
+	border-top: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;	
+}
+
+.settings{
+	text-align: left;
+	margin: 1.5em 1.5em 0em 1.5em;
+	background: #F3F3F3;
+	font-size: 15px ;
+	padding: 0.5em 0 0.5em 0;
+}
+
+.blue{
+	background: blue;
+}
+
+
+.submenu{
+	margin:1em 0 2em 0;
+	border-left: 1px solid lightgrey;
+	text-align: center;	
+}
+
+.NLBsubmenu{
+	margin:1em 0 2em 0;		
+	text-align: center;
+}
+
+.font_pass{
+	font: 10pt sans-serif; 
+	margin: 1em 0 0 2em;
+}
+
+.job-detail-help{
+	max-width: 1em;
+	max-height: 1em;
+	vertical-align: -4%;	
+}

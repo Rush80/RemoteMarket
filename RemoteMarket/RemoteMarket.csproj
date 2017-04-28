@@ -214,6 +214,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\WorkTypeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -319,6 +320,27 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="img\П5" />
+    <Content Include="fonts\RobotoBold\RobotoBold.eot" />
+    <Content Include="fonts\RobotoBold\RobotoBold.ttf" />
+    <Content Include="fonts\RobotoBold\RobotoBold.woff" />
+    <Content Include="fonts\RobotoCondensedBold\RobotoCondensedBold.eot" />
+    <Content Include="fonts\RobotoCondensedBold\RobotoCondensedBold.ttf" />
+    <Content Include="fonts\RobotoCondensedBold\RobotoCondensedBold.woff" />
+    <Content Include="fonts\RobotoCondensedLight\RobotoCondensedLight.eot" />
+    <Content Include="fonts\RobotoCondensedLight\RobotoCondensedLight.ttf" />
+    <Content Include="fonts\RobotoCondensedLight\RobotoCondensedLight.woff" />
+    <Content Include="fonts\RobotoCondensedRegular\RobotoCondensedRegular.eot" />
+    <Content Include="fonts\RobotoCondensedRegular\RobotoCondensedRegular.ttf" />
+    <Content Include="fonts\RobotoCondensedRegular\RobotoCondensedRegular.woff" />
+    <Content Include="fonts\RobotoLight\RobotoLight.eot" />
+    <Content Include="fonts\RobotoLight\RobotoLight.ttf" />
+    <Content Include="fonts\RobotoLight\RobotoLight.woff" />
+    <Content Include="fonts\RobotoMedium\RobotoMedium.eot" />
+    <Content Include="fonts\RobotoMedium\RobotoMedium.ttf" />
+    <Content Include="fonts\RobotoMedium\RobotoMedium.woff" />
+    <Content Include="fonts\RobotoRegular\RobotoRegular.eot" />
+    <Content Include="fonts\RobotoRegular\RobotoRegular.ttf" />
+    <Content Include="fonts\RobotoRegular\RobotoRegular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\dropzone\dropzone.css" />
@@ -344,6 +366,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Views\Account\Login.cshtml" />
     <None Include="Views\Project\project_view.cshtml" />
+    <None Include="Views\Profile\index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
